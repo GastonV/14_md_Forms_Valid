@@ -14,13 +14,13 @@ const validation = {
     return minMaxValid;
   },
 };
+type inputKeys = keyof typeof validation;
+
 const minMaxValid = (inputString: string): boolean => {
   let min = 4;
   let max = 12;
   return inputString.length >= min && inputString.length <= max ? true : false;
 };
-
-type inputKeys = keyof typeof validation;
 
 form.addEventListener("submit", (e) => {
   //prevents default browser actions
@@ -34,9 +34,6 @@ form.addEventListener("submit", (e) => {
         console.log(value);
         return;
       }
-
     });
   }
 });
-
-console.log("1234444");
