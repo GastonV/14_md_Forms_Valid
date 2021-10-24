@@ -1,0 +1,13 @@
+@import "/src/assets/styles/reset.scss";
+@import "/src/assets/styles/flexboxgrid.scss";
+@import "/src/assets/styles/globals.scss";
+@import "/src/assets/styles/helper.scss";
+
+.form{
+    background-color:black;
+    
+}
+.form__main{
+    display: grid;
+    gap: 30px;
+}
