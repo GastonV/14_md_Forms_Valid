@@ -7,17 +7,25 @@ body {
     background-color: #CFC9E9;
 }
 
+*:hover {
+    border-color: #7A5CFA;
+    outline: #7A5CFA;
+}
+
 .form {
-    margin: 0 auto;
+    margin: 80px auto;
     background-color: #FFFFFF;
     justify-items: center;
     max-width: fit-content;
+
 }
 
 .form__container {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: 760px;
-    justify-items: center;
+    gap: 34px;
+    justify-items: stretch;
+    padding: 100px;
 }
 
 .form__input {
@@ -26,21 +34,34 @@ body {
     border-radius: 8px;
     padding: 16px;
     font-size: 16px;
+    color: #666666;
+    box-shadow: 0 0 5pt 2pt #d3d3d3;
+
     width: 100%;
+
+    &:hover,
+    &:focus {
+        outline: #7A5CFA;
+    }
 }
 
-
+.form_label {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666666;
+}
 
 .form__main {
     display: grid;
-    justify-items: center;
+    grid-template-columns: minmax(256px, 565px);
+    justify-self: center;
     gap: 30px;
 }
 
 .button__section {
     display: flex;
     justify-content: space-between;
-
 }
 
 .button {
@@ -50,5 +71,21 @@ body {
     font-size: 16px;
     color: white;
     overflow: none;
+    border: none;
+    box-shadow: 0 0 5pt 2pt #d3d3d3;
 
+    &:focus {
+        outline: 1px solid #795cfac9;
+    }
+}
+
+.form__select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.laptop {
+    top :0;
+    left : 0;
 }
