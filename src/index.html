@@ -36,25 +36,30 @@
                 <div class="form__checkAndRadio">
 
                     <div class="form__select">
-                        <label>
-                            <input type="checkbox">
+                        <label class="tick_agree">
                             Check if you agree.
+                            <input type="checkbox">
                         </label>
-                        <label for="radio_lable">
-                            <input type="radio" name="selective_choice" checked>
+                        
+                        <label class="check__box">
                             Radio Selection 1
+                            <input type="radio" name="radio" checked value="Ābols">
+                            <span class="checkmark"></span>
                         </label>
-                        <label for="radio_lable">
-                            <input type="radio" name="selective_choice">
+                        <label class="check__box">
                             Radio Selection 2
+                            <input type="radio" name="radio" value="Bananana">
+                            <span class="checkmark"></span>
                         </label>
-                        <label for="radio_lable">
-                            <input type="radio" name="selective_choice">
+                        <label class="check__box">
                             Radio Selection 3
+                            <input type="radio" name="radio" value="Tetris">
+                            <span class="checkmark"></span>
                         </label>
-                        <label for="radio_lable">
-                            <input type="radio" name="selective_choice">
+                        <label class="check__box">
                             Radio Selection 4
+                            <input type="radio" name="radio" value="Auto">
+                            <span class="checkmark"></span>
                         </label>
                     </div>
                 </div>
@@ -64,23 +69,21 @@
                 </div>
             </form>
 
-            <div class="sucess_screen">
+            <div class="sucess__screen">
                 <svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 16C0 7.16345 7.16344 0 16 0H400V400H16C7.16345 400 0 392.837 0 384V16Z"
-                    fill="#BDFFBC" />
+                        fill="#BDFFBC" />
                     <path d="M0 16C0 7.16345 7.16344 0 16 0H400V400H16C7.16345 400 0 392.837 0 384V16Z"
-                    fill="url(#paint0_linear_15:246)" />
+                        fill="url(#paint0_linear_15:246)" />
                     <defs>
                         <linearGradient id="paint0_linear_15:246" x1="6" y1="7.99999" x2="400" y2="400"
-                        gradientUnits="userSpaceOnUse">
+                            gradientUnits="userSpaceOnUse">
                             <stop stop-color="#CDFFBC" />
                             <stop offset="1" stop-color="#9CBBFF" />
                         </linearGradient>
                     </defs>
-                    <svg  width="240" height="240" viewBox="0 0 240 240" fill="none"
-                        y="80" x="100"
+                    <svg width="240" height="240" viewBox="0 0 240 240" fill="none" y="80" x="100"
                         xmlns="http://www.w3.org/2000/svg">
-                        <g class="light-1"></g>
                         <path
                             d="M13.2932 180.964L96.8931 229.547C98.665 230.58 101.519 230.58 103.291 229.563L230.319 156.215C232.09 155.197 232.09 153.54 230.319 152.507L146.719 103.924C144.963 102.907 142.109 102.907 140.337 103.924L13.3096 177.256C11.5378 178.29 11.5213 179.947 13.2932 180.964Z"
                             fill="#AABAFD" />
@@ -216,20 +219,30 @@
                         <path d="M60.1205 95.9194L60.1295 99.0877L52.4199 103.539L52.4109 100.371L60.1205 95.9194Z"
                             fill="#D9DDF6" />
                     </svg>
-                    
-                    
                 </svg>
-            </div>
-            
-            
-            
-        </div>
-        
-        
-        
-        
-        
+                <div class="sucess__screen__greetings">
+                    <span class="circle--green">
+                        <svg width="52" height="40" viewBox="0 0 52 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M51.1743 4.14173L22.514 39.977L0 21.2131L4.24793 16.1156L21.5582 30.5386L45.9971 0L51.1743 4.14173Z"
+                                fill="white" />
+                        </svg>
+                    </span>
+                    <h1 class="heading1--greetings">Thanks for signing up!</h1>
+                    <div class="footer">
+                        <div class="avatar">
+                            <img src="./assets/svg/Avatar.png" class="avatar__img" alt="">
+                            <a href="#" class="avatar_name">Glen Williams</a>
+                        </div>
+                        <div class="readMore">
+                            <a href="#" class="readMore--link">Read more &rarr;</a>
 
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
     <script src="/scripts.js"></script>
 </body>

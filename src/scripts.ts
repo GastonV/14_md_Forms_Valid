@@ -13,6 +13,12 @@ const validation = {
   password_confirm: (value: string): boolean => {
     return minMaxValid(value);
   },
+  selective_choice: (): boolean => {
+    return true;
+  },
+  radio: (): boolean => {
+    return true;
+  },
 };
 type inputKeys = keyof typeof validation;
 
@@ -29,14 +35,14 @@ form.addEventListener("submit", (e) => {
 
   if (form.checkValidity()) {
     formValues.forEach((value: string, classNameKey: inputKeys) => {
+      console.log(classNameKey + "      class name accessss");
+      console.log(value + "      class name accessss");
       let isValidForm = validation[classNameKey](value);
       if (!isValidForm) {
         console.error(value + "   was incorect");
       }
+
       // do the magic with css
-
-
-
     });
   }
 });
