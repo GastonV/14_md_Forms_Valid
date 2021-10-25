@@ -4,14 +4,14 @@ const form: HTMLFormElement = document.querySelector("form");
 let classes = (classes: string) => document.getElementsByClassName(classes);
 
 const validation = {
-  form__userName: (value: string) => {
-    return minMaxValid;
+  username: (value: string): boolean => {
+    return minMaxValid(value);
   },
-  form__password__input: (value: string) => {
-    return minMaxValid;
+  password: (value: string): boolean => {
+    return minMaxValid(value);
   },
-  form__password__confirm__input: (value: string) => {
-    return minMaxValid;
+  password_confirm: (value: string): boolean => {
+    return minMaxValid(value);
   },
 };
 type inputKeys = keyof typeof validation;
@@ -19,7 +19,7 @@ type inputKeys = keyof typeof validation;
 const minMaxValid = (inputString: string): boolean => {
   let min = 4;
   let max = 12;
-  return inputString.length >= min && inputString.length <= max ? true : false;
+  return inputString.length >= min && inputString.length <= max;
 };
 
 form.addEventListener("submit", (e) => {
@@ -29,11 +29,14 @@ form.addEventListener("submit", (e) => {
 
   if (form.checkValidity()) {
     formValues.forEach((value: string, classNameKey: inputKeys) => {
-      let isValidForm = validation[classNameKey];
+      let isValidForm = validation[classNameKey](value);
       if (!isValidForm) {
-        console.log(value);
-        return;
+        console.error(value + "   was incorect");
       }
+      // do the magic with css
+
+
+
     });
   }
 });

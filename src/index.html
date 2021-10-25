@@ -13,32 +13,36 @@
 </head>
 
 <body>
-    <section class="form">
-
+    <section class="form ">
         <div class="container-fluid">
-            <div class="row">
-                <div class="from__container col-xs.col-xs-4 col-xs-offset-4">
-                    <form action="#submit" class="form__main">
-                        <label class="form__userName">
-                            <input placeholder="User Name" required type="text" name="form__userName__input"
-                                class="form__userName__input">
-                        </label>
-                        <label class="form__password">
-                            <input placeholder="Password" required type="password" name="form__password__input"
-                                class="form__password__input">
-                        </label>
-                        <label class="form__password__confirm">
-                            <input placeholder="Confirm Your Password" required type="password"
-                                name="form__password__confirm__input" class="form__password__confirm__input">
 
-                        </label>
-                        <input type="submit" class="submit__input">
-                        <div class="form__checkAndRadio">
-                            <button type="reset">Reset</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="form__container">
+                <form action="#submit" class="form__main">
+                    <label class="form__userName">
+
+                        <input placeholder="User Name" required type="text" name="username"
+                            class="form__userName__input form__input">
+                    </label>
+                    <label class="form__password">
+                        <input placeholder="Password" required type="password" name="password"
+                            class="form__password__input form__input">
+                    </label>
+                    <label class="form__password__confirm">
+                        <input placeholder="Confirm Your Password" required type="password" name="password_confirm"
+                            class="form__password__confirm__input form__input">
+
+                    </label>
+                    <div class="form__checkAndRadio">
+
+                    </div>
+                    <div class="button__section">
+                        <button type="submit" class="button">Submit</button>
+                        <button type="reset" class="button">Reset</button>
+                    </div>
+                </form>
             </div>
+
+
         </div>
 
 
