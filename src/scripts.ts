@@ -24,8 +24,7 @@ const validation = {
     if (checkValue !== value) {
       errorMessage = "Your password does not match";
       return false;
-    }
-    if (value.length < 4) {
+    } else if (value.length < 4) {
       errorMessage = "Too short";
       return false;
     }
@@ -56,7 +55,7 @@ form.addEventListener("submit", (e) => {
   let index = 0;
   formValues.forEach((value: string, classNameKey: inputKeys) => {
     let isValidForm = validation[classNameKey](value);
-    
+
     if (!isValidForm) {
       selectInputSpanTags[index].innerHTML = errorMessage;
       selectInputSpanTags[index].classList.add("show", "show--red");
@@ -69,12 +68,10 @@ form.addEventListener("submit", (e) => {
     if (isValidForm) {
       const popup = document.querySelector(".pop_up_sucess");
       popup.classList.add("popup_show");
-     
     }
   });
 });
-window.addEventListener("click", e =>{
+window.addEventListener("click", (e) => {
   const outsideClick = document.querySelector(".sucess__screen");
   outsideClick.classList.contains("popup_show");
-  
 });
