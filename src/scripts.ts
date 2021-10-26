@@ -20,6 +20,7 @@ const validation = {
     return true;
   },
 };
+
 type inputKeys = keyof typeof validation;
 
 const minMaxValid = (inputString: string): boolean => {
@@ -41,7 +42,6 @@ form.addEventListener("submit", (e) => {
       if (!isValidForm) {
         console.error(value + "   was incorect");
       }
-
       // do the magic with css
     });
   }
