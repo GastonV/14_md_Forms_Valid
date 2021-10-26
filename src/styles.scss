@@ -3,7 +3,7 @@
 @import "/src/assets/styles/globals.scss";
 @import "/src/assets/styles/helper.scss";
 
-/*Radio nokopēts*/
+
 .check__box {
     font-family: 'Noto Sans';
     display: flex;
@@ -82,10 +82,6 @@
 }
 
 
-
-
-
-
 body {
     background-color: #CFC9E9;
 }
@@ -104,6 +100,7 @@ body {
 }
 
 .form__container {
+    position: relative;
     display: grid;
     grid-template-columns: 900px;
     gap: 34px;
@@ -160,7 +157,11 @@ body {
     box-shadow: 0 0 5pt 2pt #d3d3d3;
 
     &:focus {
-        outline: 1px solid #795cfac9;
+        outline: 1px solid #4c24fac9;
+    }
+    &:hover{
+        cursor: pointer;
+        background-color: #5d39fd;
     }
 }
 
@@ -273,5 +274,99 @@ body {
 
     & a:visited {
         color: #007AE9;
+    }
+}
+
+
+
+//could be also changed to hide or show using visible
+.input__span__info {
+    font-family: 'Noto Sans';
+    font-size: 12px;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.show--red {
+    color: #EB5757;
+}
+
+.dropdown__choice {
+    display: none;
+    border: 1px solid rgba(25, 59, 103, 0.05);
+    box-shadow: 0px 18px 64px -8px rgba(28, 50, 79, 0.38), 0px 4px 24px -3px rgba(28, 55, 90, 0.16);
+    border-radius: 4px;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    border-radius: 6px;
+    margin-top: 3px;
+    background-color: #FFFFFF;
+
+
+    a {
+        font-family: "Roboto";
+        font-weight: 400;
+        text-decoration: none;
+        color: #616161;
+        background: #FFFFFF;
+        font-size: 17px;
+        min-width: 167px;
+        padding: 12px 8px;
+        margin-top: 5px;
+        transition: 600ms;
+
+        &:hover {
+            border-radius: 50px;
+            box-shadow: 0px 18px 64px -8px rgba(28, 50, 79, 0.38), 0px 4px 24px -3px rgba(28, 55, 90, 0.16);
+            background-color: #007AE9;
+            transition: 200ms;
+
+        }
+    }
+}
+
+.button__dropdown {
+    font-family: 'Montserrat';
+    background: #007AE9;
+    border: none;
+    border-radius: 4px;
+    padding: 20px 60px;
+    color: #FFFFFF;
+    font-size: 17px;
+    outline: none;
+    min-width: 167px;
+
+}
+
+.pop_up_sucess {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(207, 201, 233, 0.7);
+}
+
+.sucess__screen {
+    top: 50%;
+    left: 10%;
+    background-color: #FFFFFF;
+    transform: translate(0, -50%);
+    position: absolute;
+    border-radius: 16px;
+}
+
+.popup_show {
+    display: flex;
+    z-index: 2;
+
+    &>.form__container {
+
+        filter: blur(12px);
     }
 }
