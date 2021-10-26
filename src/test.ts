@@ -1,22 +1,4 @@
 import * as fs from 'fs';
-fs.readFileSync('foo.txt','utf8');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+fs.readFileSync('readme.md','utf8');
 
 

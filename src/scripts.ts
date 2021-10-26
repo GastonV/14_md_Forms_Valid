@@ -1,10 +1,5 @@
-const catchMyTag = document.querySelector(".form__userName__input");
-const btn_submit = document.querySelector(".submit__input");
 const form: HTMLFormElement = document.querySelector("form");
-//let classes = (classes: string) => document.getElementsByClassName(classes);
-//const button__dropdown = document.querySelector(".button__dropdown");
-//const dropdwon = document.querySelector(".js_dropdown");
-//const dropdownClassList = dropdwon.classList;
+
 let errorMessage = "";
 let checkValue = "";
 const validation = {
@@ -46,17 +41,6 @@ const validation = {
 
 type inputKeys = keyof typeof validation;
 
-// button__dropdown.addEventListener("click", (e) => {
-//   dropdwon.classList.toggle("show");
-// });
-// window.addEventListener("click", (event) => {
-//   if (event.target !== button__dropdown) {
-//     if (dropdownClassList.contains("show")) {
-//       dropdownClassList.remove("show");
-//     }
-//   }
-// });
-
 const minMaxValid = (inputString: string): boolean => {
   let min = 4;
   let max = 12;
@@ -72,19 +56,21 @@ form.addEventListener("submit", (e) => {
   let index = 0;
   formValues.forEach((value: string, classNameKey: inputKeys) => {
     let isValidForm = validation[classNameKey](value);
+    
+    if (!isValidForm) {
+      selectInputSpanTags[index].innerHTML = errorMessage;
+      selectInputSpanTags[index].classList.add("show", "show--red");
+    } else {
+      //@ts-nocheck
+      //@ts-ignore
+      selectInputSpanTags[index].classList.remove("show", "show--red");
+    }
+    index++;
     if (isValidForm) {
       const popup = document.querySelector(".pop_up_sucess");
       popup.classList.add("popup_show");
      
     }
-    if (!isValidForm) {
-      selectInputSpanTags[index].innerHTML = errorMessage;
-      selectInputSpanTags[index].classList.add("show", "show--red");
-    } else {
-      //@ts-ignore
-      selectInputSpanTags[index].classList.remove("show", "show--red");
-    }
-    index++;
   });
 });
 window.addEventListener("click", e =>{
