@@ -52,6 +52,7 @@ form.addEventListener("submit", (e) => {
   let selectInputSpanTags =
     document.getElementsByClassName("input__span__info");
   const formValues = new FormData(form);
+
   let index = 0;
   formValues.forEach((value: string, classNameKey: inputKeys) => {
     let isValidForm = validation[classNameKey](value);
@@ -71,7 +72,16 @@ form.addEventListener("submit", (e) => {
     }
   });
 });
+
 window.addEventListener("click", (e) => {
   const outsideClick = document.querySelector(".sucess__screen");
   outsideClick.classList.contains("popup_show");
 });
+
+let alphabets = [...Array(26)];
+let AtoZ: string[] = [];
+alphabets.map((letter, index) => {
+  AtoZ.push(String.fromCharCode(index + 97));
+});
+
+
